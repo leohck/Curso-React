@@ -22,6 +22,9 @@ describe('<PostCard />', () => {
     });
 
     it('should match with Snapshot', () => {
-        render(<PostCard {...props} />);
+        const { container } = render(<PostCard {...props} />);
+        expect(
+            container.firstChild
+        ).toMatchSnapshot();
     });
 });
